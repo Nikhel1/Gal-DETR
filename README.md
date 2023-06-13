@@ -43,4 +43,4 @@ To evaluate on test images with a single GPU run:
 python -m torch.distributed.launch --nproc_per_node=1 --use_env main.py --eval --resume outputs_gal/checkpoint.pth
 ```
 ## License
-The License will be updated after publication. Note that original DETR is released under the Apache 2.0 license. 
+The License will be updated after publication. Note that the DETR is released under the Apache 2.0 license. 
