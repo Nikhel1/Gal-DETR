@@ -87,14 +87,14 @@ def get_args_parser():
 
     # dataset parameters
     parser.add_argument('--dataset_file', default='coco')
-    parser.add_argument('--coco_path', default='RadioGalaxyNET_V4', type=str)
+    parser.add_argument('--coco_path', default='RadioGalaxyNET', type=str)
     parser.add_argument('--noisy_data', default=False, action='store_true')
     parser.add_argument('--noisy_datax2', default=False, action='store_true')
     parser.add_argument('--noisy_dataPNG', default=False, action='store_true')
     parser.add_argument('--coco_panoptic_path', type=str)
     parser.add_argument('--remove_difficult', action='store_true')
 
-    parser.add_argument('--output_dir', default='outputs_gal/RGV4/v2',
+    parser.add_argument('--output_dir', default='outputs_gal',
                         help='path where to save, empty for no saving')
     parser.add_argument('--device', default='cuda',
                         help='device to use for training / testing')
