@@ -256,22 +256,22 @@ def build(image_set, args):
     assert root.exists(), f'provided COCO path {root} does not exist'
     mode = 'instances'
     PATHS = {
-        "train": (root / "train2017", root / "annotations" / f'{mode}_train2017.json'),
-        "val": (root / "val2017", root / "annotations" / f'{mode}_val2017.json'),
-        "test": (root / "test2017", root / "annotations" / f'{mode}_test2017.json'),
+        "train": (root / "train", root / "annotations" / f'{mode}_train.json'),
+        "val": (root / "val", root / "annotations" / f'{mode}_val.json'),
+        "test": (root / "test", root / "annotations" / f'{mode}_test.json'),
     }
     if args.noisy_data or args.noisy_datax2:
         PATHS = {
-            "train": (root / "train_fits", root / "annotations" / f'{mode}_train2017.json'),
-            "val": (root / "val_fits", root / "annotations" / f'{mode}_val2017.json'),
-            "test": (root / "test_fits", root / "annotations" / f'{mode}_test2017.json'),
+            "train": (root / "train_fits", root / "annotations" / f'{mode}_train.json'),
+            "val": (root / "val_fits", root / "annotations" / f'{mode}_val.json'),
+            "test": (root / "test_fits", root / "annotations" / f'{mode}_test.json'),
         }
     
     if args.noisy_dataPNG:
         PATHS = {
-            "train": (root / "train_noisy", root / "annotations" / f'{mode}_train2017.json'),
-            "val": (root / "val_noisy", root / "annotations" / f'{mode}_val2017.json'),
-            "test": (root / "test_noisy", root / "annotations" / f'{mode}_test2017.json'),
+            "train": (root / "train_noisy", root / "annotations" / f'{mode}_train.json'),
+            "val": (root / "val_noisy", root / "annotations" / f'{mode}_val.json'),
+            "test": (root / "test_noisy", root / "annotations" / f'{mode}_test.json'),
         }
 
     img_folder, ann_file = PATHS[image_set]
@@ -288,7 +288,7 @@ if __name__ == "__main__":
 
     class DefaultArgs():
         def __init__(self):
-            self.coco_path = 'RadioGalaxyNET_V4'
+            self.coco_path = 'RadioGalaxyNET'
             self.masks = None
             self.keypoints = True
             self.noisy_data = False
