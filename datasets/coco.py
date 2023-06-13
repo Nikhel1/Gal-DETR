@@ -254,24 +254,24 @@ def make_coco_transforms(image_set, args, crop=True):
 def build(image_set, args):
     root = Path(args.coco_path)
     assert root.exists(), f'provided COCO path {root} does not exist'
-    mode = 'instances'
+    mode = ''  # instances_
     PATHS = {
-        "train": (root / "train", root / "annotations" / f'{mode}_train.json'),
-        "val": (root / "val", root / "annotations" / f'{mode}_val.json'),
-        "test": (root / "test", root / "annotations" / f'{mode}_test.json'),
+        "train": (root / "train", root / "annotations" / f'{mode}train.json'),
+        "val": (root / "val", root / "annotations" / f'{mode}val.json'),
+        "test": (root / "test", root / "annotations" / f'{mode}test.json'),
     }
     if args.noisy_data or args.noisy_datax2:
         PATHS = {
-            "train": (root / "train_fits", root / "annotations" / f'{mode}_train.json'),
-            "val": (root / "val_fits", root / "annotations" / f'{mode}_val.json'),
-            "test": (root / "test_fits", root / "annotations" / f'{mode}_test.json'),
+            "train": (root / "train_fits", root / "annotations" / f'{mode}train.json'),
+            "val": (root / "val_fits", root / "annotations" / f'{mode}val.json'),
+            "test": (root / "test_fits", root / "annotations" / f'{mode}test.json'),
         }
     
     if args.noisy_dataPNG:
         PATHS = {
-            "train": (root / "train_noisy", root / "annotations" / f'{mode}_train.json'),
-            "val": (root / "val_noisy", root / "annotations" / f'{mode}_val.json'),
-            "test": (root / "test_noisy", root / "annotations" / f'{mode}_test.json'),
+            "train": (root / "train_noisy", root / "annotations" / f'{mode}train.json'),
+            "val": (root / "val_noisy", root / "annotations" / f'{mode}val.json'),
+            "test": (root / "test_noisy", root / "annotations" / f'{mode}test.json'),
         }
 
     img_folder, ann_file = PATHS[image_set]
