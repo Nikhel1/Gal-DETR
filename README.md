@@ -34,7 +34,7 @@ To train on a single node with 4 gpus run:
 ```
 python -m torch.distributed.launch --nproc_per_node=4 --use_env main.py --output_dir ./outputs_gal/
 ```
-To ease reproduction of our results we provide model checkpoint [here](). 
+To ease reproduction of our results we provide model checkpoint [here](https://figshare.com/s/4818dcd3abf0a9d425a3). 
 Place the model in `./outputs_gal/` directory.
 
 ## Evaluation
