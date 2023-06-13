@@ -1,4 +1,4 @@
-**Gal-DETR**: Radio Galaxy Detection with Transformers
+**Gal-DETR**
 ========
 
 ## Installation
