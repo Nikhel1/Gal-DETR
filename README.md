@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 ## Data preparation
 
-Download and extract RadioGalaxyNET data from the link described in the datasheet.
+Download and extract RadioGalaxyNET data from [here](https://data.csiro.au/collection/61068).
 We expect the directory structure to be the following:
 ```
 ./RadioGalaxyNET/
@@ -43,4 +43,4 @@ To evaluate on test images with a single GPU run:
 python -m torch.distributed.launch --nproc_per_node=1 --use_env main.py --eval --resume outputs_gal/checkpoint.pth
 ```
 ## License
-The License will be updated after publication. Note that the DETR is released under the Apache 2.0 license. 
+Apache 2.0 license. 
