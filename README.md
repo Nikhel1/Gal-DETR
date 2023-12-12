@@ -1,12 +1,10 @@
 **Gal-DETR**
 ========
-##
 
 [Journal Paper](https://doi.org/10.1017/pasa.2023.64)
 
 [NeurIPS 2023](https://nips.cc/virtual/2023/76102)
 
-========
 ## Installation
 Create a Python 3.8 environement with CUDA 11.3.0. 
 Then, install PyTorch 1.5+ and torchvision 0.6+:
