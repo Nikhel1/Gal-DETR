@@ -1,7 +1,6 @@
 **Gal-DETR**
 ========
-
-[Journal Paper DOI](https://doi.org/10.1017/pasa.2023.64)
+### [Journal Paper DOI](https://doi.org/10.1017/pasa.2023.64)
 ========
 ## Installation
 Create a Python 3.8 environement with CUDA 11.3.0. 
